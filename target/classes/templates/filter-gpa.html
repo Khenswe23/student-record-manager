@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Filter by GPA</title>
+    <style>
+        body {
+            background-color: #f4f6f8;
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            max-width: 500px;
+            margin: auto;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        label, select, input {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        button {
+            margin-top: 25px;
+            background-color: #3498db;
+            border: none;
+            color: white;
+            padding: 14px;
+            font-size: 16px;
+            border-radius: 8px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Filter Students by GPA</h2>
+<form action="/students/filter-gpa" method="get">
+    <label>Condition</label>
+    <select name="condition">
+        <option value="above">Above</option>
+        <option value="below">Below</option>
+    </select>
+
+    <label>GPA Value</label>
+    <input type="number" name="value" step="0.01" required>
+
+    <button type="submit">Filter</button>
+</form>
+
+</body>
+</html>

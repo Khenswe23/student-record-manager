@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add Student</title>
+    <style>
+        body {
+            background-color: #f4f6f8;
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            max-width: 500px;
+            margin: auto;
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 25px;
+            width: 100%;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Add New Student</h2>
+<form action="/students" method="post">
+    <label>Name</label>
+    <input type="text" name="name" required>
+
+    <label>Roll Number</label>
+    <input type="text" name="rollNumber" required>
+
+    <label>Course</label>
+    <select name="course" required>
+        <option value="CSE">CSE</option>
+        <option value="EEE">EEE</option>
+        <option value="BBA">BBA</option>
+    </select>
+
+    <label>GPA</label>
+    <input type="number" name="gpa" step="0.01" min="0" max="4" required>
+
+    <button type="submit">Save Student</button>
+</form>
+
+</body>
+</html>
+
+
+
